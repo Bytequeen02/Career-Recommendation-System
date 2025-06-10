@@ -1,9 +1,11 @@
 import streamlit as st
 import numpy as np
 import pickle
+import joblib
 
 # Load model and scaler
-model = pickle.load(open("model_compressed.pkl", 'rb'))
+#model = pickle.load(open("model_compressed.pkl", 'rb'))
+model = joblib.load("model_compressed.pkl")
 scaler = pickle.load(open("scaler.pkl", 'rb'))
 
 # Title
